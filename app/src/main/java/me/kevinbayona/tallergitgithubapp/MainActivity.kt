@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -70,12 +71,12 @@ fun TerceraPantalla(){
             color = Color.Blue,
 
         )
-        Text(text = " ---------------------------------------------------",
-            modifier = Modifier
-                .padding(8.dp),
-            fontSize = 14.sp,
-            color = Color.Gray.copy(alpha = 2f)
+        HorizontalDivider(
+            modifier = Modifier.padding(horizontal = 50.dp),
+            thickness = 1.dp,
+            color = Color.LightGray
         )
+        Spacer(modifier = Modifier.height(25.dp))
 
         Column(modifier = Modifier
             .fillMaxSize(),
@@ -120,8 +121,46 @@ fun TerceraPantalla(){
                 fontSize = 16.sp,
                 color = Color.Black
             )
-        }
 
+            Spacer(modifier = Modifier.height(25.dp))
+
+
+            Column(modifier = Modifier
+                .fillMaxSize(),
+                verticalArrangement = Arrangement.Top,
+                horizontalAlignment = Alignment.CenterHorizontally)
+            {
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 50.dp),
+                    thickness = 1.dp,
+                    color = Color.LightGray
+                )
+
+                Text(text = "Sobre mi materia favorita",
+                    modifier = Modifier
+                        .padding(8.dp),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                    color = Color.Gray.copy(alpha = 0.6f)
+
+                )
+
+                Text(text = "Me apasiona el Desarrollo de Aplicaciones\n" +
+                        "Möviles porque permite transformar ideas\n" +
+                        "en herramientas tangibles que Ias\n" +
+                        "personas usan a diario. Me encanta el reto\n" +
+                        "de diseöar interfaces intuitivas.",
+                    modifier = Modifier
+                        .padding(8.dp),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                    color = Color.Gray
+
+                )
+
+
+            }
+        }
 
     }
 
