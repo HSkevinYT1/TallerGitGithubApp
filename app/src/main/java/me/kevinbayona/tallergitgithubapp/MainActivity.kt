@@ -18,8 +18,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -43,8 +45,7 @@ fun TerceraPantalla(){
     Column(modifier = Modifier
         .fillMaxSize(),
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
+        horizontalAlignment = Alignment.CenterHorizontally) {
 
         Spacer(modifier = Modifier.height(25.dp))
         Image(
@@ -56,6 +57,72 @@ fun TerceraPantalla(){
 
         Spacer(modifier = Modifier.height(25.dp))
 
+        Text(text = "Kevin Bayona",
+            modifier = Modifier
+                .padding(8.dp),
+            fontWeight = FontWeight.Bold,
+            fontSize = 18.sp
+        )
+        Text(text = "Desarrollador Móvil Jr",
+            modifier = Modifier
+                .padding(8.dp),
+            fontSize = 14.sp,
+            color = Color.Blue,
+
+        )
+        Text(text = " ---------------------------------------------------",
+            modifier = Modifier
+                .padding(8.dp),
+            fontSize = 14.sp,
+            color = Color.Gray.copy(alpha = 2f)
+        )
+
+        Column(modifier = Modifier
+            .fillMaxSize(),
+            horizontalAlignment = Alignment.Start) {
+            Text(text = "Edad",
+                modifier = Modifier
+                    .padding(8.dp),
+                fontSize = 16.sp,
+                color = Color.Gray.copy(alpha = 0.9f)
+            )
+
+            Text(text = "19 años",
+                modifier = Modifier
+                    .padding(8.dp),
+                fontSize = 16.sp,
+                color = Color.Black
+            )
+            Text(text = "Correo",
+                modifier = Modifier
+                    .padding(8.dp),
+                fontSize = 16.sp,
+                color = Color.Gray.copy(alpha = 0.9f)
+            )
+
+            Text(text = "[email protected]",
+                modifier = Modifier
+                    .padding(8.dp),
+                fontSize = 16.sp,
+                color = Color.Blue,
+                textDecoration = TextDecoration.Underline
+            )
+            Text(text = "Ciudad",
+                modifier = Modifier
+                    .padding(8.dp),
+                fontSize = 16.sp,
+                color = Color.Gray.copy(alpha = 0.9f)
+            )
+
+            Text(text = "Bucaramanga, Colombia",
+                modifier = Modifier
+                    .padding(8.dp),
+                fontSize = 16.sp,
+                color = Color.Black
+            )
+        }
+
 
     }
+
 }
