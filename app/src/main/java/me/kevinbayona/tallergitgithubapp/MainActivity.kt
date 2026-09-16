@@ -174,7 +174,7 @@ fun TerceraPantalla(){
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .background(
-                            Color.Blue,
+                            Color(0xFF1976D3),
                             shape = RoundedCornerShape(12.dp)
                         )
                         .padding(
